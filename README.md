@@ -31,7 +31,7 @@ Start a New Game: Click the New Game button to start over.
 Running the Game
 To play the game, you can visit the GitHub Pages site where it's hosted:
 
-Play the Number Guesser Game
+[Play the Number Guesser Game](https://arhis222.github.io/mini-website-game/)
 
 ## How to Contribute
 If you have suggestions for improvements or find any issues, feel free to:
