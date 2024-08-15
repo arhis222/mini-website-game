@@ -7,18 +7,33 @@ const clickSound = document.getElementById('clickSound');
 const winSound = document.getElementById('winSound');
 const backgroundSound = document.getElementById('backgroundSound');
 const guessMessage = document.getElementById('guessMessage');
+const musicControlBtn = document.getElementById('musicControlBtn');
 
 let min = -1000;
-let max = 1000;   
+let max = 1000;
 let guess = Math.floor((min + max) / 2);
 let attempt_counter = 0;
 let guess_previous = null; // Initialize to null
 
 backgroundSound.loop = true;
-backgroundSound.volume = 0.15; 
+backgroundSound.volume = 0.25; 
 backgroundSound.play();
 
-window.alert("Welcome to the Number Guesser! Think of a number in your head between -1000 and 1000, and I'll try to guess it. Use the 'Higher' and 'Lower' commands on the screen to guide me in finding your number. Let's see how quickly I can get it right!");
+// Function to toggle background sound
+function toggleBackgroundSound() {
+    if (backgroundSound.paused) {
+        backgroundSound.play();
+        musicControlBtn.textContent = '🔊'; // Volume icon
+    } else {
+        backgroundSound.pause();
+        musicControlBtn.textContent = '🔈'; // Mute icon
+    }
+}
+
+// Set up event listener for music control button
+musicControlBtn.addEventListener('click', toggleBackgroundSound);
+
+window.alert("Welcome to the Number Guesser! Think of a number in your head between -1000 and 1000, and I'll try to guess it. Use the 'Higher' and 'Lower' commands on the screen to guide me in finding your number. Let's see how quickly I can get it right. Don't hesitate to click the sound button!");
 
 numberLabel.textContent = guess;
 

@@ -7,25 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+    
     <h1 id="myh1">Number Guesser</h1>
+
+    <div id="musicControlContainer">
+        <button id="musicControlBtn" class="buttons">🔊</button>
+    </div>
     
     <p id="guessMessage">I guess your number is :</p>
     <label id="numberLabel">0</label><br>
 
-    <div id = "btnContainer">
-    <button id="lowerBtn" class="buttons">▼</button>
-    <button id="newGameBtn" class="buttons">new game</button>
-    <button id="higherBtn" class="buttons">▲</button>
-    <br>
-    <br>
-    <button id="yesBtn" class="buttons">Yes</button>
+    <div id="btnContainer">
+        <button id="lowerBtn" class="buttons">▼</button>
+        <button id="newGameBtn" class="buttons">New Game</button>
+        <button id="higherBtn" class="buttons">▲</button>
+        <br>
+        <br>
+        <button id="yesBtn" class="buttons">Yes</button>
+    </div>
+
     <audio id="clickSound" src="sound-effects/click-sound.mp3"></audio>
     <audio id="winSound" src="sound-effects/win-sound.mp3"></audio>
     <audio id="backgroundSound" src="sound-effects/background-sound.mp3"></audio>
     
     <script src="index.js"></script>
-    </div>
-    
-    
 </body>
 </html>
